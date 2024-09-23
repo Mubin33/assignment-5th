@@ -23,6 +23,18 @@
             background-color: green;
             color: white;
         }
+        .popup{
+            position: fixed; 
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 9999; 
+            box-shadow: 0 4px 8px rgba(37, 219, 0, 0.3);
+        }
     </style>
   </head>
   <body >
@@ -57,6 +69,17 @@
     
 <!-- ======  main   ======== -->
      <main class="w-11/12 md:w-9/12 mx-auto py-7 ">
+
+        <!-- ==== alert ==== --> 
+        <div class="hidden popup rounded-2xl px-6 py-3  "> 
+            <h1 class="text-center m-7 text-3xl font-bold">Congratulation!</h1>
+            <img class="h-16 w-16 mx-auto m-7" src="./assets/coin.png" alt="coin">
+            <p class="m-3 text-center text-xl">You have donated for humankind</p>
+            <h2 class="text-center text-2xl font-semibold my-3">Successfully</h2>
+            <button onclick="closeAlert()" class="btn btn-success text-white w-full p-2">Close</button>
+        </div>
+
+
         <!-- ===== donation section ====== -->
         <div id="donation-section">
             <div id="first-card" class="p-5 gap-10 rounded-lg border-2 border-slate-200 grid md:grid-cols-2 grid-cols-1">
@@ -116,11 +139,7 @@
          <div id="history-section" class="hidden">
             
             <h1 class="text-center text-2xl text-gray-600 font-semibold">Donation History</h1>
-            
-            <!-- <div class="py-4 border my-7 border-slate-400 p-4 rounded-lg">
-                <h1 class="text-lg font-bold pb-4">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
-                <p class="text-gray-600 text-sm">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-            </div> -->
+        
          </div>
      </main>
 
@@ -129,12 +148,9 @@
 
      <script src="home.js"></script>
      <script>
-        // let createDiv = document.createElement("div")
-        // createDiv.innerHTML = `<div class="py-4 border my-7 border-slate-400 p-4 rounded-lg"> <h1 class="text-lg font-bold pb-4">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h1> <p class="text-gray-600 text-sm">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p> </div>`
-        
-
-
-
+        function closeAlert(){
+            let popup = document.querySelector(".popup").classList.add("hidden")
+        }
      </script>
   </body>
 </html>

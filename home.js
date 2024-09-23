@@ -80,6 +80,9 @@ function forValue(userInput, cardAmount, title){
             let newBalance = totalAmountNum - inputNum
             totalAmount.innerText = newBalance
             console.log(newBalance)
+
+            let popup = document.querySelector('.popup').classList.remove("hidden")
+            return popup
         }
         else{
             alert("Sorry You Donn't Have Many Balance")
