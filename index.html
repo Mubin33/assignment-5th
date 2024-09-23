@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0" />
     <title>Document</title>
 
     <link
@@ -43,7 +43,7 @@
          <!-- ===== Navbar ====== -->
         <div id="nav" class="flex justify-around py-5 bg-gray-50 items-center" >
             <div id="blog-btn">
-                <button class="btn btn-success">Blog</button>
+                <button id="blog" class="btn btn-success">Blog</button>
             </div>
             <!--  -->
             <div id="titel" class="flex items-center gap-1 md:gap-3">
@@ -60,7 +60,7 @@
 
          <!-- ======== hero ====== -->
           <div id="hero" class="bg-slate-100  flex justify-center">
-            <div class="flex gap-5 py-8">
+            <div class="flex gap-5 py-3 md:py-8">
                 <button id="donation-btn" onclick="setColor('#donation-btn')"  class= "btn btng active">Donation</button>
                 <button id="history-btn" onclick="setColor('#history-btn')" class="btn btng  ">History</button>
             </div>
@@ -89,7 +89,7 @@
                 <div>
                     <div class="flex rounded-xl gap-2 bg-gray-100 p-2 w-4/12">
                         <img class="h-5" src="./assets/coin.png" alt="coin">
-                        <h2 id="noakhali-amount" class="text-sm font-semibold">2</h2>
+                        <h2 id="noakhali-amount" class="text-sm font-semibold">0</h2>
                         <h2 class="text-sm font-semibold">BDT</h2>
                     </div>
                     <h2 id="noakhali-title" class="text-xl font-semibold py-2">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -106,7 +106,7 @@
                 <div>
                     <div class="flex rounded-xl gap-2 bg-gray-100 p-2 w-4/12">
                         <img class="h-5" src="./assets/coin.png" alt="coin">
-                        <h2 id="feni-amount" class="text-sm font-semibold">2</h2>
+                        <h2 id="feni-amount" class="text-sm font-semibold">0</h2>
                         <h2 class="text-sm font-semibold">BDT</h2>
                     </div>
                     <h2 id="feni-title" class="text-xl font-semibold py-2">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -123,7 +123,7 @@
                 <div>
                     <div class="flex rounded-xl gap-2 bg-gray-100 p-2 w-4/12">
                         <img class="h-5" src="./assets/coin.png" alt="coin">
-                        <h2 id="qota-amount" class="text-sm font-semibold">2</h2>
+                        <h2 id="qota-amount" class="text-sm font-semibold">0</h2>
                         <h2 class="text-sm font-semibold">BDT</h2>
                     </div>
                     <h2 id="qota-title" class="text-xl font-semibold py-2">Aid for Injured in the Quota Movement</h2>
@@ -151,6 +151,11 @@
         function closeAlert(){
             let popup = document.querySelector(".popup").classList.add("hidden")
         }
+
+
+        document.querySelector("#blog").addEventListener('click', function(){
+            window.location.href = "/blog.html"
+        })
      </script>
   </body>
 </html>

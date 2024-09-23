@@ -2,13 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0">
     <title>Document</title>
     
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <header class="sticky top-0 z-10">
+        <!-- ===== Navbar ====== -->
+       <div id="nav" class="flex justify-around py-5 bg-gray-50 items-center" >
+           <div id="home-btn">
+               <button id="home" class="btn btn-success">Home</button>
+           </div>
+           <!--  -->
+           <div id="titel" class="flex items-center gap-1 md:gap-3">
+               <img class="h-9  " src="./assets/logo.png" alt="logo">
+               <h1 class="text-lg md:text-2xl font-semibold">Donate Bangladesh</h1>
+           </div>
+           <!--  -->
+           <div id="balance" class="flex items-center gap-1 md:gap-2">
+               <img class="h-7" src="./assets/coin.png" alt="coin">
+               <h2 id="total-amount" class="text-lg font-semibold">4900</h2>
+               <h2 class="text-lg font-semibold">BDT</h2>
+           </div>
+        </div>
+    </header>
     
+
+    <main class="my-28 w-9/12 mx-auto">
+        <h1 class="my-10 text-4xl font-bold text-gray-600">FAQ ===></h1>
+        <div class="collapse mt-5 collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-bold">ওয়েবসাইট ডিজাইন করার সময় CSS কেন গুরুত্বপূর্ণ?</div>
+            <div class="collapse-content">
+              <p>CSS (Cascading Style Sheets) ওয়েবসাইটের ডিজাইন এবং লেআউট নিয়ন্ত্রণ করে। এটি HTML এর সাথে কাজ করে এবং ওয়েব পৃষ্ঠার রং, ফন্ট, লেআউট, এবং রেসপন্সিভ ডিজাইন নির্ধারণ করতে সহায়ক। CSS ছাড়া, ওয়েবসাইটটি খুবই সাধারণ এবং কম আকর্ষণীয় দেখাবে।</p>
+            </div>
+          </div>
+          <div class="collapse mt-5 collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">রেসপন্সিভ ডিজাইন কী এবং কেন এটি প্রয়োজনীয়?</div>
+            <div class="collapse-content">
+              <p>রেসপন্সিভ ডিজাইন হলো এমন একটি ওয়েব ডিজাইন কৌশল যেখানে ওয়েব পেজটি বিভিন্ন ডিভাইস এবং স্ক্রিন সাইজ অনুযায়ী স্বয়ংক্রিয়ভাবে সামঞ্জস্যপূর্ণ হয়ে যায়। এটি প্রয়োজনীয় কারণ ব্যবহারকারীরা বিভিন্ন ডিভাইসে (মোবাইল, ট্যাবলেট, ডেস্কটপ) ওয়েবসাইট ব্রাউজ করে, এবং প্রত্যেক ডিভাইসে ভালো অভিজ্ঞতা পেতে এটি অপরিহার্য।</p>
+            </div>
+          </div>
+          <div class="collapse mt-5 collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3"  />
+            <div class="collapse-title text-xl font-bold">জাভাস্ক্রিপ্ট কীভাবে ওয়েবসাইটের ইন্টারঅ্যাকশন বৃদ্ধি করে?</div>
+            <div class="collapse-content">
+              <p>জাভাস্ক্রিপ্ট একটি প্রোগ্রামিং ভাষা যা ওয়েবসাইটে গতিশীল কন্টেন্ট যোগ করতে ব্যবহৃত হয়। এটি ব্যবহারকারীদের সাথে ইন্টারঅ্যাকশন করতে এবং পৃষ্ঠা রিফ্রেশ না করেই ডেটা আপডেট করতে সহায়ক। উদাহরণস্বরূপ, ফর্ম যাচাইকরণ, মেনু স্লাইড, পপআপ বা অ্যানিমেশন তৈরি করা সম্ভব জাভাস্ক্রিপ্টের মাধ্যমে।</p>
+            </div>
+          </div>
+          <div class="collapse mt-5 collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">ওয়েব ডেভেলপমেন্টে API এর ভূমিকা কী?</div>
+            <div class="collapse-content">
+              <p>API (Application Programming Interface) ওয়েব ডেভেলপমেন্টে দুটি সিস্টেমের মধ্যে যোগাযোগ স্থাপন করতে ব্যবহৃত হয়। API এর মাধ্যমে একটি অ্যাপ্লিকেশন অন্য একটি অ্যাপ্লিকেশনের ডেটা বা কার্যকারিতা ব্যবহার করতে পারে। উদাহরণস্বরূপ, তৃতীয় পক্ষের ডেটা (যেমন: ওয়েদার ইনফরমেশন, পেমেন্ট গেটওয়ে) ওয়েবসাইটে ইন্টিগ্রেট করা API এর মাধ্যমে করা হয়।</p>
+            </div>
+          </div>
+          <div class="collapse mt-5 collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">SEO (Search Engine Optimization) কেন ওয়েব ডেভেলপমেন্টে গুরুত্বপূর্ণ?</div>
+            <div class="collapse-content">
+              <p>SEO (সার্চ ইঞ্জিন অপটিমাইজেশন) ওয়েবসাইটকে সার্চ ইঞ্জিনগুলিতে (যেমন: Google, Bing) উচ্চতর র‌্যাঙ্কিংয়ে আনার কৌশল। এটি গুরুত্বপূর্ণ কারণ একটি ভাল SEO অপ্টিমাইজড ওয়েবসাইট বেশি ট্রাফিক পেতে পারে, যা ব্যবসার সাফল্যের জন্য অপরিহার্য। SEO এর জন্য প্রয়োজনীয় টেকনিক্যাল এলিমেন্ট যেমন পৃষ্ঠা গতি, মোবাইল রেসপন্সিভনেস, এবং মেটা ট্যাগ ব্যবহারের দিকে ওয়েব ডেভেলপারের মনোযোগ দেওয়া জরুরি।</p>
+            </div>
+          </div>
+    </main>
+
+
+
+
+    <script>
+        document.querySelector("#home").addEventListener('click', function(){
+            window.location.href = "/index.html"
+        })
+    </script>
 </body>
 </html>
